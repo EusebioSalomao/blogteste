@@ -1,0 +1,23 @@
+<div class="jumbotron">
+    <h1 class="display-4">Bem-vindo ao Blog de Node</h1>
+    <p class="lead">Este blog permite criar uma conta para que postes suas publicaçãoes</p>
+    <hr class="my-4">
+    <a href="/user/registro" class="btn btn-primary btn-lg" role="button">Crie uma conta</a>
+</div>
+<hr>
+<h2>Postagens recentes:</h2>
+{{#each postagens}}
+    <div class="card mt-4">   
+        <div class="card-body">
+            <h3 class="mark p-2">{{titulo}}</h3>
+            <p>{{descricao}}</p>
+            <a href="/postagens/{{slug}}"><button  class="btn btn-success btn-sm">Laia mais</button></a>
+            <hr>
+            <small>Categoria: {{categoria.nome}}</small><br>
+            <small>Data de criação: {{data}}</small>
+
+        </div>
+    </div>
+{{else}}
+    <h3>Nenhuma postagem registrada</h3>
+{{/each}}

@@ -1,0 +1,17 @@
+<h2 class="text-center my-bg1 p-4">Postagens da categoria {{categoria.nome}}</h2>
+<hr>
+{{#each postagens}}
+    <div class="card mt-4">   
+        <div class="card-body">
+            <h3 class="mark p-2">{{titulo}}</h3>
+            <p>{{descricao}}</p>
+            <a href="/postagens/{{slug}}"><button  class="btn btn-success btn-sm">Laia mais</button></a>
+            <hr>
+        
+            <small>Data de criação: {{data}}</small>
+
+        </div>
+    </div>
+{{else}}
+    <h3>Nenhuma postagem registrada</h3>
+{{/each}}

@@ -1,0 +1,24 @@
+<div class="container">
+    <div class="row">
+        <div class="col-6 offset-3">
+            {{#if error}}
+            <div class="alert alert-danger">{{error}}</div>
+        {{else}}
+        {{/if}}
+<h4>Login:</h4>
+
+            <div class="">
+                <div class="card-body">
+                    <form action="/user/login" method="post">
+                        <label for="email">Email:</label>
+                        <input type="email" name="email" class="form-control" required>
+                        <label for="senha">Senha:</label>
+                        <input type="password" name="senha" class="form-control" required>
+
+                        <button type="submit" class="btn btn-success mt-3 form-control">Entrar</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
