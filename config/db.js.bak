@@ -14,11 +14,6 @@ const connectDB = ()=>{
 		console.log("BD Atlas conectado com sucesso!")
 	}).catch(()=>{
 		console.log("Erro com a conexão, BD Atlas!")
-		mongoose.connect("mongodb://127.0.0.1/blogapp").then(()=>{
-		console.log("BD Local conectado com sucesso!")
-	}).catch(()=>{
-		console.log("Erro com a conexão, BD Local!")
-	})
 	})
 }
 
